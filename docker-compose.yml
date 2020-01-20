@@ -1,0 +1,12 @@
+version: "3.2"
+  
+services:
+  vouch-proxy:
+    image: voucher/vouch-proxy
+    ports:
+      - 127.0.0.1:9090:9090
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    restart: always
+   
